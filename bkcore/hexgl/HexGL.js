@@ -64,7 +64,9 @@ bkcore.hexgl.HexGL = function(opts)
 	this.containers.main = opts.container == undefined ? document.body : opts.container;
 	this.containers.overlay = opts.overlay == undefined ? document.body : opts.overlay;
 
-	this.gameover = opts.gameover == undefined ? null : opts.gameover
+	this.gameover = opts.gameover == undefined ? null : opts.gameover;
+
+	this.godmode = opts.godmode == undefined ? false : opts.godmode;
 
 	this.hud = null;
 
@@ -438,4 +440,7 @@ bkcore.hexgl.HexGL.prototype.tweakShipControls = function()
 		c.driftLerp = 0.3;
 		c.angularLerp = 0.4;
 	}
+
+	if(this.godmode)
+		c.shieldDamage = 0.0;
 }
