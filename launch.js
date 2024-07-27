@@ -74,16 +74,6 @@
     return window.location.reload();
   };
 
-  $('s-credits').onclick = function() {
-    $('step-1').style.display = 'none';
-    return $('credits').style.display = 'block';
-  };
-
-  $('credits').onclick = function() {
-    $('step-1').style.display = 'block';
-    return $('credits').style.display = 'none';
-  };
-
   hasWebGL = function() {
     var canvas, gl;
     gl = null;
