@@ -1,6 +1,6 @@
 $ = (_) -> document.getElementById _
 
-init = (controlType, quality, hud, godmode) ->
+init = (controlType, quality, hud) ->
   hexGL = new bkcore.hexgl.HexGL(
     document: document
     width: window.innerWidth
@@ -12,7 +12,6 @@ init = (controlType, quality, hud, godmode) ->
     difficulty: 0
     hud: hud is 1
     controlType: controlType
-    godmode: godmode
     track: 'Cityscape'
   )
   window.hexGL=hexGL
@@ -41,7 +40,6 @@ s = [
     'GAMEPAD'], defaultControls, defaultControls, 'Controls: ']
   ['quality', ['LOW', 'MID', 'HIGH', 'VERY HIGH'], 3, 3, 'Quality: ']
   ['hud', ['OFF', 'ON'], 1, 1, 'HUD: ']
-  ['godmode', ['OFF', 'ON'], 0, 1, 'Godmode: ']
 ]
 
 for a in s
@@ -56,7 +54,7 @@ $('step-2').onclick = ->
   init s[0][3], s[1][3], s[2][3], s[3][3]
 $('step-5').onclick = ->
   window.location.reload()
-  
+
 hasWebGL = ->
   gl = null
   canvas = document.createElement('canvas');

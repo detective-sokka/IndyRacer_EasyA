@@ -61,8 +61,6 @@ bkcore.hexgl.HexGL = function(opts)
 
 	this.gameover = opts.gameover == undefined ? null : opts.gameover;
 
-	this.godmode = opts.godmode == undefined ? false : opts.godmode;
-
 	this.hud = null;
 
 	this.gameplay = null;
@@ -419,7 +417,4 @@ bkcore.hexgl.HexGL.prototype.tweakShipControls = function()
 		c.driftLerp = 0.3;
 		c.angularLerp = 0.4;
 	}
-
-	if(this.godmode)
-		c.shieldDamage = 0.0;
 }
