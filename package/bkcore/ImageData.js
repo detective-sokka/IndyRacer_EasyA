@@ -1,12 +1,4 @@
 /*!
- * @class bkcore.ImageData
- *
- * Loads an image and gives access to pixel data.
- * 
- * @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
- */
-
-/*!
  * @package bkcore
  */
 var bkcore = bkcore || {};

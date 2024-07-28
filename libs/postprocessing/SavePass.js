@@ -1,7 +1,3 @@
-/**
- * @author alteredq / http://alteredqualia.com/
- */
-
 THREE.SavePass = function ( renderTarget ) {
 
 	var shader = THREE.ShaderExtras[ "screen" ];

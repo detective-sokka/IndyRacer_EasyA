@@ -3,9 +3,6 @@
 /*
   TouchController (stick + buttons) for touch devices
   Based on the touch demo by Seb Lee-Delisle <http://seb.ly/>
-  
-  @class bkcore.controllers.TouchController
-  @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
  */
 
 (function() {

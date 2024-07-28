@@ -3,7 +3,6 @@
  *
  * new Date().getTime() wrapper to use as timers.
  * 
- * @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
  */
 
 /**

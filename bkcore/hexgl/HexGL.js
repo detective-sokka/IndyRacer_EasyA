@@ -1,10 +1,3 @@
- /*
- * HexGL
- * @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
- * @license This work is licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License.
- *          To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/3.0/.
- */
-
 'use strict';
 'v1.0.1';
 
@@ -213,6 +206,7 @@ bkcore.hexgl.HexGL.prototype.displayScore = function(f, l)
 
 	if(this.gameplay.result == this.gameplay.results.FINISH)
 	{
+		console.log("game finhised")
 		ds != undefined && (ds.innerHTML = "Finished!");
 		// local record
 		if(typeof(Storage)!=="undefined")

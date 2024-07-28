@@ -1,9 +1,3 @@
-###
-  Loads an image and gives access to pixel data.
-  
-  @class bkcore.ImageData
-  @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
-###
 class ImageData
 
   ###

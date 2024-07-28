@@ -2,9 +2,6 @@
 
 /*
   Various useful methods
-  
-  @class bkcore.Utils
-  @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
  */
 
 (function() {

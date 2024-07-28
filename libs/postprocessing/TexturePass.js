@@ -1,7 +1,3 @@
-/**
- * @author alteredq / http://alteredqualia.com/
- */
-
 THREE.TexturePass = function ( texture, opacity ) {
 
 	var shader = THREE.ShaderExtras[ "screen" ];

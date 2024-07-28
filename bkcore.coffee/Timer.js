@@ -2,9 +2,6 @@
 
 /*
  new Date().getTime() wrapper to use as timer.
-
- @class bkcore.Timer
- @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
 */
 
 

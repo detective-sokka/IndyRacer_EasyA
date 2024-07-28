@@ -1,7 +1,3 @@
-/**
- * @author alteredq / http://alteredqualia.com/
- */
-
 THREE.MaskPass = function ( scene, camera ) {
 
 	this.scene = scene;

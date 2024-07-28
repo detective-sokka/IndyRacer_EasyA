@@ -13,12 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Author: Tim Down <tim@timdown.co.uk>
- * Version: 2.1
- * Build date: 21 March 2010
- * Website: http://www.timdown.co.uk/jshashtable
- *
- * (Slight mod to add to gamecore namespace -- martin@playcraftlabs.com)
  */
 
 /**

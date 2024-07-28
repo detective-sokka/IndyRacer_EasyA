@@ -1,8 +1,3 @@
-/**
- * @author Thibaut Despoulain / http://bkcore.com
- * @author alteredq / http://alteredqualia.com/
- * @author mr.doob / http://mrdoob.com/
- */
 var bkcore = bkcore || {};
 bkcore.threejs = bkcore.threejs || {};
 

@@ -1,14 +1,3 @@
-/*!
- * @class bkcore.threejs.Particles
- *
- * Particle system wrapper/helper
- * 
- * @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
- */
-
-/*!
- * @package bkcore.threejs
- */ 
 var bkcore = bkcore || {};
 bkcore.threejs = bkcore.threejs || {};
 
