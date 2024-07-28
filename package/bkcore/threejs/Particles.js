@@ -3,7 +3,6 @@
  *
  * Particle system wrapper/helper
  * 
- * @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
  */
 
 /*!

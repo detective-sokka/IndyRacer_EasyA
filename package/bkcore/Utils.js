@@ -2,8 +2,6 @@
  * @class bkcore.Utils
  *
  * Various useful methods
- * 
- * @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
  */
 
 /*!

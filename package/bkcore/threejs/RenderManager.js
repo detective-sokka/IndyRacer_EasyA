@@ -1,7 +1,6 @@
 /*!
  * bkcore.threejs.RenderManager helps handling multiple scenes, cameras and render loops.
  * 
- * @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
  * @license MIT
  * 
  * Initialize the a RenderManager by passing a Renderer object:

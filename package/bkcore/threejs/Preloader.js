@@ -3,7 +3,6 @@
  *
  * Displays a small 3D preloader scene
  * 
- * @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
  */
 
 /*!

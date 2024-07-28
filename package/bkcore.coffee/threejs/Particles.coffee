@@ -2,7 +2,6 @@
   Particle system wrapper/helper
   
   @class bkcore.threejs.Particles
-  @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
 ###
 class Particles
 
@@ -165,7 +164,6 @@ class Particles
   Particle sub class
   
   @class bkcore.threejs.Particle
-  @author Thibaut 'BKcore' Despoulain <http://bkcore.com>
 ###
 class Particle
 
