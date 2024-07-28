@@ -12,7 +12,7 @@ init = (controlType, quality, hud, godmode) ->
     difficulty: 0
     hud: hud is 1
     controlType: controlType
-    godmode: godmode
+    godmode: 0
     track: 'Cityscape'
   )
   
