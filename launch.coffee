@@ -89,19 +89,3 @@ else
     $('step-2').style.display = 'block'
     $('step-2').style.backgroundImage = "url(css/help-#{s[0][3]}.png)"
   
-  checkMetaMask = ->
-    window.ethereum && window.ethereum.isMetaMask
-
-  $('login').onclick = ->
-    if checkMetaMask()
-      # Request access to user accounts
-      ethereum.request({ method: 'eth_requestAccounts' })
-        .then (accounts) ->
-          # Accounts now exposed
-          console.log("MetaMask login successful, account:", accounts[0])
-        .catch (error) ->
-          console.error("MetaMask login error:", error.message)
-    
-    else
-      console.error("MetaMask not detected. Please install MetaMask extension.")
-
