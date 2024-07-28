@@ -51,12 +51,12 @@ bkcore.hexgl.tracks.Cityscape = {
 					'hex'								: "textures/hud/hex.jpg",
 					'spark'								: "textures/particles/spark.png",
 					'cloud'								: "textures/particles/cloud.png",
-					'ship.feisar.diffuse'				: "textures/ships/feisar/diffuse.jpg",
+					'ship.feisar.diffuse'				: getSkin(),
 					'booster.diffuse'					: "textures/ships/feisar/booster/booster.png",
 					'booster.sprite'					: "textures/ships/feisar/booster/boostersprite.jpg",
 					'track.cityscape.diffuse'			: "textures/tracks/cityscape/diffuse.jpg",
 					'track.cityscape.scrapers1.diffuse'	: "textures/tracks/cityscape/scrapers1/diffuse.jpg",
-					'track.cityscape.scrapers2.diffuse'	: "textures/tracks/cityscape/scrapers2/diffuse.jpg",
+					'track.cityscape.scrapers2.diffuse'	: getBuilding(),
 					'track.cityscape.start.diffuse'		: "textures/tracks/cityscape/start/diffuse.jpg",
 					'track.cityscape.start.banner'		: "textures/tracks/cityscape/start/start.jpg",
 					'bonus.base.diffuse'				: "textures/bonus/base/diffuse.jpg"
@@ -123,18 +123,18 @@ bkcore.hexgl.tracks.Cityscape = {
 					'hex'								: "textures.full/hud/hex.jpg",
 					'spark'								: "textures.full/particles/spark.png",
 					'cloud'								: "textures.full/particles/cloud.png",
-					'ship.feisar.diffuse'				: "textures.full/ships/feisar/diffuse.jpg",
+					'ship.feisar.diffuse'				: getSkin(),
 					'ship.feisar.specular'				: "textures.full/ships/feisar/specular.jpg",
 					'ship.feisar.normal'				: "textures.full/ships/feisar/normal.jpg",
 					'booster.diffuse'					: "textures.full/ships/feisar/booster/booster.png",
 					'booster.sprite'					: "textures.full/ships/feisar/booster/boostersprite.jpg",
-					'track.cityscape.diffuse'			: "textures.full/tracks/cityscape/diffuse.jpg",
+					'track.cityscape.diffuse'			: "textures/tracks/cityscape/diffuse.jpg",
 					'track.cityscape.specular'			: "textures.full/tracks/cityscape/specular.jpg",
 					'track.cityscape.normal'			: "textures.full/tracks/cityscape/normal.jpg",
 					'track.cityscape.scrapers1.diffuse'	: "textures.full/tracks/cityscape/scrapers1/diffuse.jpg",
 					'track.cityscape.scrapers1.specular': "textures.full/tracks/cityscape/scrapers1/specular.jpg",
 					'track.cityscape.scrapers1.normal'	: "textures.full/tracks/cityscape/scrapers1/normal.jpg",
-					'track.cityscape.scrapers2.diffuse'	: "textures.full/tracks/cityscape/scrapers2/diffuse.jpg",
+					'track.cityscape.scrapers2.diffuse'	: getBuilding(),
 					'track.cityscape.scrapers2.specular': "textures.full/tracks/cityscape/scrapers2/specular.jpg",
 					'track.cityscape.scrapers2.normal'	: "textures.full/tracks/cityscape/scrapers2/normal.jpg",
 					'track.cityscape.start.diffuse'		: "textures.full/tracks/cityscape/start/diffuse.jpg",
@@ -245,9 +245,7 @@ bkcore.hexgl.tracks.Cityscape = {
 				transparent: false
 			});
 		}
-		// desktop + quality mid or high
-		// OR
-		// mobile + quality high
+
 		else // HIGH
 		{
 			this.materials.track = bkcore.Utils.createNormalMaterial({
@@ -486,15 +484,6 @@ bkcore.hexgl.tracks.Cityscape = {
 			this.objects.components.shipEffects.update(dt);
 
 			this.objects.components.cameraChase.update(dt, this.objects.components.shipControls.getSpeedRatio());
-			/*this.objects.time += 0.002;
-			var c = this.objects.components.cameraChase.camera;
-			c.position.set(
-				Math.cos(this.objects.time)*15+this.objects.components.shipControls.dummy.position.x,
-				10+this.objects.components.shipControls.dummy.position.y,
-				Math.sin(this.objects.time)*15+this.objects.components.shipControls.dummy.position.z
-			);
-			c.lookAt(this.objects.components.shipControls.dummy.position);
-			this.objects.components.cameraChase.cameraCube.rotation.copy(c.rotation);*/
 
 			this.objects.composers.game.render(dt);
 			if(this.objects.hud) this.objects.hud.update(
@@ -518,4 +507,15 @@ bkcore.hexgl.tracks.Cityscape = {
 			lowFPS: 0
 		});
 	}
+}
+
+
+
+function getSkin(){
+	return localStorage.getItem("skinUrl")  ? localStorage.getItem("skinUrl") :  "textures/ships/feisar/diffuse.jpg"
+}
+
+function getBuilding()
+{	
+	return localStorage.getItem("buildingUrl")  ? localStorage.getItem("buildingUrl") :  "textures/tracks/cityscape/scrapers2/diffuse.jpg"
 }

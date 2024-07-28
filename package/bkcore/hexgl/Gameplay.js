@@ -46,7 +46,7 @@ bkcore.hexgl.Gameplay = function(opts)
 	this.lap = 1;
 	this.lapTimes = [];
 	this.lapTimeElapsed = 0;
-	this.maxLaps = 3;
+	this.maxLaps = 1;
 	this.score = null;
 	this.finishTime = null;
 	this.onFinish = opts.onFinish == undefined ? function(){console.log("FINISH");} : opts.onFinish;
@@ -106,7 +106,8 @@ bkcore.hexgl.Gameplay = function(opts)
 bkcore.hexgl.Gameplay.prototype.simu = function()
 {
 	this.lapTimes = [92300, 91250, 90365];
-	this.finishTime = this.lapTimes[0]+this.lapTimes[1]+this.lapTimes[2];
+	this.finishTime = this.lapTimes[0];
+	// this.finishTime = this.lapTimes[0]+this.lapTimes[1]+this.lapTimes[2];
 	if(this.hud != null) this.hud.display("Finish");
 	this.step = 100;
 	this.result = this.results.FINISH;

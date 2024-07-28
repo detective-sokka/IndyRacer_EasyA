@@ -46,12 +46,12 @@ bkcore.hexgl.tracks.Cityscape = {
 			this.lib.load({
 				textures: {
 					'hex'								: "textures/hud/hex.jpg",
-					'ship.feisar.diffuse'				: "textures/ships/feisar/diffuse.jpg",
+					'ship.feisar.diffuse'				: getSkin(),
 					'booster.diffuse'					: "textures/ships/feisar/booster/booster.png",
 					'booster.sprite'					: "textures/ships/feisar/booster/boostersprite.jpg",
 					'track.cityscape.diffuse'			: "textures/tracks/cityscape/diffuse.jpg",
 					'track.cityscape.scrapers1.diffuse'	: "textures/tracks/cityscape/scrapers1/diffuse.jpg",
-					'track.cityscape.scrapers2.diffuse'	: "textures/tracks/cityscape/scrapers2/diffuse.jpg",
+					'track.cityscape.scrapers2.diffuse'	: getBuilding(),
 					'track.cityscape.start.diffuse'		: "textures/tracks/cityscape/start/diffuse.jpg",
 					'track.cityscape.start.banner'		: "textures/tracks/cityscape/start/start.jpg",
 					'bonus.base.diffuse'				: "textures/bonus/base/diffuse.jpg"
@@ -88,7 +88,7 @@ bkcore.hexgl.tracks.Cityscape = {
 					'hex'								: "textures/hud/hex.jpg",
 					'spark'								: "textures/particles/spark.png",
 					'cloud'								: "textures/particles/cloud.png",
-					'ship.feisar.diffuse'				: "textures/ships/feisar/diffuse.jpg",
+					'ship.feisar.diffuse'				: getSkin(),
 					'ship.feisar.specular'				: "textures/ships/feisar/specular.jpg",
 					'ship.feisar.normal'				: "textures/ships/feisar/normal.jpg",
 					'booster.diffuse'					: "textures/ships/feisar/booster/booster.png",
@@ -99,7 +99,7 @@ bkcore.hexgl.tracks.Cityscape = {
 					'track.cityscape.scrapers1.diffuse'	: "textures/tracks/cityscape/scrapers1/diffuse.jpg",
 					'track.cityscape.scrapers1.specular': "textures/tracks/cityscape/scrapers1/specular.jpg",
 					'track.cityscape.scrapers1.normal'	: "textures/tracks/cityscape/scrapers1/normal.jpg",
-					'track.cityscape.scrapers2.diffuse'	: "textures/tracks/cityscape/scrapers2/diffuse.jpg",
+					'track.cityscape.scrapers2.diffuse'	: getBuilding(),
 					'track.cityscape.scrapers2.specular': "textures/tracks/cityscape/scrapers2/specular.jpg",
 					'track.cityscape.scrapers2.normal'	: "textures/tracks/cityscape/scrapers2/normal.jpg",
 					'track.cityscape.start.diffuse'		: "textures/tracks/cityscape/start/diffuse.jpg",
@@ -444,4 +444,14 @@ bkcore.hexgl.tracks.Cityscape = {
 			lowFPS: 0
 		});
 	}
+}
+
+function getSkin()
+{
+	return localStorage.getItem("skinUrl")  ? localStorage.getItem("skinUrl") :  "textures/ships/feisar/diffuse.jpg"
+}
+
+function getBuilding()
+{
+	return localStorage.getItem("buildingUrl")  ? localStorage.getItem("buildingUrl") :  "textures/tracks/cityscape/scrapers2/diffuse.jpg"
 }

@@ -46,23 +46,23 @@
 
   defaultControls = bkcore.Utils.isTouchDevice() ? 1 : 0;
 
-  s = [['controlType', ['KEYBOARD', 'TOUCH', 'LEAP MOTION CONTROLLER', 'GAMEPAD'], defaultControls, defaultControls, 'Controls: '], ['quality', ['LOW', 'MID', 'HIGH', 'VERY HIGH'], 3, 3, 'Quality: '], ['hud', ['OFF', 'ON'], 1, 1, 'HUD: '], ['godmode', ['OFF', 'ON'], 0, 1, 'Godmode: ']];
+  s = [['controlType', ['KEYBOARD'], defaultControls, defaultControls, 'Controls: '], ['quality', ['LOW', 'MID', 'HIGH', 'VERY HIGH'], 3, 3, 'Quality: '], ['hud', ['OFF', 'ON'], 1, 1, 'HUD: '], ['godmode', ['OFF', 'ON'], 0, 1, 'Godmode: ']];
 
-  _fn = function(a) {
-    var e, f, _ref;
-    a[3] = (_ref = u(a[0])) != null ? _ref : a[2];
-    e = $("s-" + a[0]);
-    (f = function() {
-      return e.innerHTML = a[4] + a[1][a[3]];
-    })();
-    return e.onclick = function() {
-      return f(a[3] = (a[3] + 1) % a[1].length);
-    };
-  };
-  for (_i = 0, _len = s.length; _i < _len; _i++) {
-    a = s[_i];
-    _fn(a);
-  }
+  // _fn = function(a) {
+  //   var e, f, _ref;
+  //   a[3] = (_ref = u(a[0])) != null ? _ref : a[2];
+  //   e = $("s-" + a[0]);
+  //   (f = function() {
+  //     return e.innerHTML = a[4] + a[1][a[3]];
+  //   })();
+  //   return e.onclick = function() {
+  //     return f(a[3] = (a[3] + 1) % a[1].length);
+  //   };
+  // };
+  // for (_i = 0, _len = s.length; _i < _len; _i++) {
+  //   a = s[_i];
+  //   _fn(a);
+  // }
 
   $('step-2').onclick = function() {
     $('step-2').style.display = 'none';
@@ -73,6 +73,16 @@
   $('step-5').onclick = function() {
     return window.location.reload();
   };
+
+  // $('s-credits').onclick = function() {
+  //   $('step-1').style.display = 'none';
+  //   return $('credits').style.display = 'block';
+  // };
+
+  // $('credits').onclick = function() {
+  //   $('step-1').style.display = 'block';
+  //   return $('credits').style.display = 'none';
+  // };
 
   hasWebGL = function() {
     var canvas, gl;

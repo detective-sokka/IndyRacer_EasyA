@@ -15,6 +15,7 @@ init = (controlType, quality, hud, godmode) ->
     godmode: godmode
     track: 'Cityscape'
   )
+  
   window.hexGL=hexGL
 
   progressbar = $ 'progressbar'
@@ -50,13 +51,23 @@ for a in s
     e = $ "s-#{a[0]}"
     (f = -> e.innerHTML = a[4]+a[1][a[3]])()
     e.onclick = -> f(a[3] = (a[3]+1)%a[1].length)
+
 $('step-2').onclick = ->
   $('step-2').style.display = 'none'
   $('step-3').style.display = 'block'
   init s[0][3], s[1][3], s[2][3], s[3][3]
+
 $('step-5').onclick = ->
   window.location.reload()
-  
+
+$('s-credits').onclick = ->
+  $('step-1').style.display = 'none'
+  $('credits').style.display = 'block'
+
+$('credits').onclick = ->
+  $('step-1').style.display = 'block'
+  $('credits').style.display = 'none'
+
 hasWebGL = ->
   gl = null
   canvas = document.createElement('canvas');
@@ -77,3 +88,20 @@ else
     $('step-1').style.display = 'none'
     $('step-2').style.display = 'block'
     $('step-2').style.backgroundImage = "url(css/help-#{s[0][3]}.png)"
+  
+  checkMetaMask = ->
+    window.ethereum && window.ethereum.isMetaMask
+
+  $('login').onclick = ->
+    if checkMetaMask()
+      # Request access to user accounts
+      ethereum.request({ method: 'eth_requestAccounts' })
+        .then (accounts) ->
+          # Accounts now exposed
+          console.log("MetaMask login successful, account:", accounts[0])
+        .catch (error) ->
+          console.error("MetaMask login error:", error.message)
+    
+    else
+      console.error("MetaMask not detected. Please install MetaMask extension.")
+
